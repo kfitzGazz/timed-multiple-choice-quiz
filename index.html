@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
     <header>
         <h3>View High Scores</h3>
-
         <p>Time: <label for="" id="timer">0</label></p>
-
     </header>
 
+
     <main>
-        <section id="intro-section"> </section>
-        <section id="questions"> 
-            <h3 id="question-message">Question would go here</h3>
-            <div id="answer-choices">answer choices go here</div>
-
-
+        <section id="intro-section">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit.</p>
+            <p>Incorrect answers will penalize your time by ten seconds for each attempt until the answer is correct or the time runs out on the timer.</p>
+            <button id="start-btn">Start Quiz</button>
         </section>
 
+        <section id="question-section" class="hide">
+            <h2 id="title">question 1</h2>
+            <ul>
+                <li><button class="choices"></button></li>
+                <li><button class="choices"></button></li>
+                <li><button class="choices"></button></li>
+                <li><button class="choices"></button></li>
+            </ul>
+        </section>
+
+        <section id="initial-section" class="hide">
+            <h3>All done!</h3>
+            <p>Your final score is <span id="score"></span></p>
+
+            Enter Initials <input type="text" id="initial-input">
+            <button id="save-btn">Save</button>
+        </section>
+
+        <section id="highscore-section" class="hide">
+            <h3>High Scores</h3>
+            <input type="text" id="saved-initials-score" readonly>
+            <div class="button-container">
+                <button id="go-back-btn">Go Back</button>
+                <button id="clear-btn">Clear High Scores</button>
+            </div>
+        </section>
 
     </main>
 
     <footer>
 
     </footer>
+
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
